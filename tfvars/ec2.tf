@@ -6,6 +6,7 @@ resource "aws_instance" "TF_EC2" {
 
   tags = {
     Name = var.Name[count.index]
+    Environment = "Prod"
     Project = "Roboshop"
     Terraaform = "True"
   }
