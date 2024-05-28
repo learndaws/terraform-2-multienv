@@ -2,26 +2,18 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = "5.51.1"
+      version = "5.51.1" # AWS provider version, not terraform version
     }
   }
 
   backend "s3" {
-    # bucket = "mybucket"
-    # key    = "path/to/my/key"
+    # bucket = "daws76s-remote-state"
+    # key    = "foreach"
     # region = "us-east-1"
-    # dynamodb_table = "TableName"
+    # dynamodb_table = "daws76s-locking"
   }
 }
 
 provider "aws" {
   region = "us-east-1"
-}
-
-terraform {
-  backend "s3" {
-    bucket = "mybucket"
-    key    = "path/to/my/key"
-    region = "us-east-1"
-  }
 }
