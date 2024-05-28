@@ -12,3 +12,10 @@ variable "Name" {
   type    = list
   default = ["Web","Catalogue","Cart","User","MongoDB","Redis"]
 }
+
+
+#**********ec2.tf**********
+
+variable "Environment" {
+
+}
